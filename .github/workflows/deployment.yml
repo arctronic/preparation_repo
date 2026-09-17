@@ -51,3 +51,10 @@ jobs:
             path:
               dist
               package.json
+        - name: Download artifact
+          uses: actions/download-artifact@v7
+          with:
+            name: dist-files
+            path: dist
+        - name: Deploy
+          run: echo "Deploying to production"
